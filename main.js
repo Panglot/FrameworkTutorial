@@ -28,14 +28,14 @@ setInterval(function()
     else if (input.a);
         anim.SetRow(2);
 
-    if(input.a)
-        anim.position.Move(new Vector2(-1,0));
-    else if(input.d)
-        anim.position.Move(new Vector2(1,0));
-    else if(input.w)
-        anim.position.Move(new Vector2(0,-1));
-    else if(input.s)
-        anim.position.Move(new Vector2(0,1));
+//    if(input.a)
+//        anim.position.Move(new Vector2(-1,0));
+//    else if(input.d)
+//        anim.position.Move(new Vector2(1,0));
+//    else if(input.w)
+//        anim.position.Move(new Vector2(0,-1));
+//    else if(input.s)
+//        anim.position.Move(new Vector2(0,1));
 
     anim.Update();
 

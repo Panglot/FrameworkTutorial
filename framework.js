@@ -413,13 +413,13 @@ document.documentElement.onmouseup=function(e)
 
 document.documentElement.onkeydown=function(e)
 {
-    var keykode;
+    var keycode;
     if(window.event)
         keycode=window.event.keyCode;
     else if (e)
-        keykode= c.which;
+        keycode= e.which;
 
-    switch (keykode)
+    switch (keycode)
     {
         case 13:
             input.enter=true;
@@ -522,13 +522,13 @@ document.documentElement.onkeydown=function(e)
 };
 document.documentElement.onkeyup=function(e)
 {
-    var keykode;
+    var keycode;
     if(window.event)
         keycode=window.event.keyCode;
     else if (e)
-        keykode= c.which;
+        keycode= e.which;
 
-    switch (keykode)
+    switch (keycode)
     {
         case 13:
             input.enter=false;
