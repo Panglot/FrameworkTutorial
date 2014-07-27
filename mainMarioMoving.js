@@ -8,7 +8,9 @@ canvas.style.height  = canvas.height + "px";
 
 var ctx              = canvas.getContext('2d');
 
-var anim = new Animation(16, 16, 0, 0, 8, "mario.png", 20, 4, 5);
+
+
+var anim = new Animation(16, 16, 0, 0, 8, "mario.png", 15, 4, 5, 30, 30);
 anim.position.Set(200,200);
 //var rect = new Rectangle(20, 20, 50, 50);
 //rect.color = new Color(255, 0 ,255, 1);
@@ -27,26 +29,26 @@ setInterval(function()
 //        rect.y -= 1.5;
 
     if(input.a) {
-        anim.position.Move(new Vector2(-1, 0));
+        anim.position.Move(new Vector2(-3, 0));
         anim.Update();
         anim.SetRow(2);
     }
-    else if(input.d) {
-        anim.position.Move(new Vector2(1, 0));
+    if(input.d) {
+        anim.position.Move(new Vector2(3, 0));
         anim.Update();
         anim.SetRow(0);
     }
-    else if(input.w){
-    anim.position.Move(new Vector2(0, -1));
+    if(input.w){
+    anim.position.Move(new Vector2(0, -3));
     anim.Update();
     }
-    else if(input.s){
-        anim.position.Move(new Vector2(0, 1));
+    if(input.s){
+        anim.position.Move(new Vector2(0, 3));
         anim.Update();
     }
 
 
-}, 1);
+}, 15);
 
 
 
@@ -61,4 +63,4 @@ setInterval(function()
 
 
 
-    }, 33);
+    }, 20);
