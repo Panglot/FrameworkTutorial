@@ -23,17 +23,18 @@ rect.color=new Color(255,100,100,1);
 
 var Update = setInterval(function()
 {
-
     var previousPosition = new Vector2(player.x,player.y);
 
+    var offset = 1;
+
     if (input.d)
-        player.x+=3;
+        player.x+=offset;
     if (input.a)
-        player.x-=3;
+        player.x-=offset;
     if (input.s)
-        player.y+=3;
+        player.y+=offset;
     if (input.w)
-        player.y-=3;
+        player.y-=offset;
 
 
 
@@ -72,4 +73,4 @@ var Draw = setInterval(function()
 
 
 
-}, 20);
+}, 10);

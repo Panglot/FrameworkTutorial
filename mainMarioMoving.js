@@ -28,25 +28,27 @@ setInterval(function()
 //    else if (input.w)
 //        rect.y -= 1.5;
 
-    if(input.a) {
-        anim.position.Move(new Vector2(-3, 0));
+    var offset = 3;
+
+    if(input.a || input.left) {
+        anim.position.Move(new Vector2(-offset, 0));
         anim.Update();
         anim.SetRow(2);
     }
-    if(input.d) {
-        anim.position.Move(new Vector2(3, 0));
+    if(input.d || input.right) {
+        anim.position.Move(new Vector2(offset, 0));
         anim.Update();
         anim.SetRow(0);
     }
-    if(input.w){
-    anim.position.Move(new Vector2(0, -3));
+    if(input.w || input.up){
+    anim.position.Move(new Vector2(0, -offset));
     anim.Update();
     }
-    if(input.s){
-        anim.position.Move(new Vector2(0, 3));
+    if(input.s || input.down){
+        anim.position.Move(new Vector2(0, offset));
         anim.Update();
     }
-
+    // anim.position.Move(new Vector2(0,2));
 
 }, 15);
 
@@ -60,7 +62,6 @@ setInterval(function()
 
 //        rect.Draw(ctx);
         anim.Draw(ctx);
-
 
 
     }, 20);
